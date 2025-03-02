@@ -21,15 +21,15 @@
                     <li>@Html.ActionLink("Facilitadores", "Index", "Facilitador", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Programas", "Index", "Programa", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Cursos", "Index", "Curso", new { area = "" }, new { @class = "nav-link" })</li>
+                    <!-- Nuevas secciones -->
+                    <li>@Html.ActionLink("Historial", "Index", "Historial", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Reportes", "Index", "Reporte", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Cerrar Sesión", "Logoff", "User", new { area = "" }, new { @class = "nav-link" })</li>
-
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container body-content">
-
-
         @RenderBody()
         <hr />
         <footer>

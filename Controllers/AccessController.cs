@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 using CEDASistema.Models;
@@ -13,46 +10,37 @@ namespace CEDASistema.Controllers
         // GET: Access
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult Enter(int user, string password)
-        {
-            if (Regex.IsMatch(user.ToString(), "^[a-z]+$", RegexOptions.IgnoreCase))
+            // Solo redirige si el usuario no está autenticado
+            if (Session["User"] == null)
             {
-                return Content("Favor ingrese su identificador numérico en el campo de usuario");
+                return RedirectToAction("Enter", "Access");
             }
 
+            // Si ya hay un usuario autenticado, no redirige
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult Enter()
+        {
+            // Simulación de login sin acceder a la base de datos
             try
             {
-                
-                using (BDPIDEntities db= new BDPIDEntities ())
+                // Crear un usuario simulado
+                Facilitador simulatedUser = new Facilitador
                 {
-                    var lst = from d in db.Facilitadors
-                              where d.cedulaFacilitador == user && d.contraseñaFacilitador == password
-                              select d;
+                    cedulaFacilitador = 12345678, // ID simulado
+                    contraseñaFacilitador = "simulatedPassword",
+                    nombreFacilitador = "Usuario Simulado"
+                };
 
-                    if (lst.Count()>0)
-                    {
-                        Facilitador oUser = lst.First();
-                        Session["User"] = oUser;
-                        return Content("1");
-                    }
-                    else
-                    {
-                        return Content("USUARIO INVÁLIDO favor intente nuevamente");
-                    }
-
-                }
-                    
-
-            }catch (Exception ex)
-            {
-                return Content( "Ocurrió un error :( " + ex.Message);
+                // Establecer el usuario en la sesión para simular que ha iniciado sesión
+                Session["User"] = simulatedUser;
+                return RedirectToAction("Index", "Home");
             }
-
+            catch (Exception ex)
+            {
+                return Content("Ocurrió un error :( " + ex.Message);
+            }
         }
-
-
     }
 }
