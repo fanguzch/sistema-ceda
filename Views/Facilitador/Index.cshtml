@@ -1,0 +1,45 @@
+﻿@model List<CEDASistema.Models.TableViewModels.FacilitadorTableViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Facilitadores</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Facilitador/AddFas")'" value="Crear Facilitador" />
+    </div>
+</div>
+<br />
+
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID: </th>
+                <th>Cedula: </th>
+                <th>Nombre: </th>
+                <th>Primer Apellido: </th>
+                <th>Segundo Apellido: </th>
+                <th>Mail: </th>
+
+            </tr>
+
+            @foreach (var oElement in Model)
+            {
+                <tr>
+                    <td>@oElement.id </td>
+                    <td>@oElement.cedula </td>
+                    <td>@oElement.nombre </td>
+                    <td>@oElement.Papellido </td>
+                    <td>@oElement.Sapellido </td>
+                    <td>@oElement.mail </td>
+                </tr>
+
+            }
+
+        </table>
+
+
+    </div>
+</div>

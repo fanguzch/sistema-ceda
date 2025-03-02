@@ -1,0 +1,43 @@
+﻿@model List<CEDASistema.Models.ProgramaTableViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Programas</h2>
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" class="btn btn-primary" onclick="document.location.href= '@Url.Content("~/Programa/AddProg")'" value="Nuevo Programa" />
+    </div>
+</div>
+<br />
+
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+
+            <tr>
+                <th>ID Programa:</th>
+                <th>Nombre Programa:</th>
+                <th>ID Estado Programa:</th>
+                <th>Objetivos Programa:</th>
+            </tr>
+
+            @foreach(var oElemento in Model)
+            {
+                <tr>
+                    <td>@oElemento.idPrograma</td>
+                    <td>@oElemento.namePrograma</td>
+                    <td>@oElemento.idEstadoProg</td>
+                    <td>@oElemento.objetivosPrograma</td>
+                </tr>
+            }
+
+
+        </table>
+
+    </div>
+
+</div>
+

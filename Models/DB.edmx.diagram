@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e9464f9928c84da5b963b5cb1be48731" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="BDPIDModel.Curso" Width="1.5" PointX="5.25" PointY="4.875" />
+        <EntityTypeShape EntityType="BDPIDModel.Dependencia" Width="1.5" PointX="3" PointY="19.75" />
+        <EntityTypeShape EntityType="BDPIDModel.EstadoCursoPrograma" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="BDPIDModel.EstadoParticipante" Width="1.5" PointX="5.25" PointY="1.75" />
+        <EntityTypeShape EntityType="BDPIDModel.Facilitador" Width="1.5" PointX="5.25" PointY="14.125" />
+        <EntityTypeShape EntityType="BDPIDModel.Modalidad" Width="1.5" PointX="3" PointY="11" />
+        <EntityTypeShape EntityType="BDPIDModel.Participante" Width="1.5" PointX="5.25" PointY="19" />
+        <EntityTypeShape EntityType="BDPIDModel.Programa" Width="1.5" PointX="3" PointY="7.375" />
+        <EntityTypeShape EntityType="BDPIDModel.Sede" Width="1.5" PointX="3" PointY="4.375" />
+        <EntityTypeShape EntityType="BDPIDModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BDPIDModel.Tipo" Width="1.5" PointX="3" PointY="14.75" />
+        <EntityTypeShape EntityType="BDPIDModel.ImparticionDeCurso" Width="1.5" PointX="7.5" PointY="4.75" />
+        <AssociationConnector Association="BDPIDModel.FK__Curso__idEstadoC__29572725" />
+        <AssociationConnector Association="BDPIDModel.FK__Curso__idModalid__276EDEB3" />
+        <AssociationConnector Association="BDPIDModel.FK__Curso__idProgram__2A4B4B5E" />
+        <AssociationConnector Association="BDPIDModel.FK__Curso__idSede__286302EC" />
+        <AssociationConnector Association="BDPIDModel.FK__Impartici__idCur__2E1BDC42" />
+        <AssociationConnector Association="BDPIDModel.FK__Participa__idDep__182C9B23" />
+        <AssociationConnector Association="BDPIDModel.FK__Programa__idEsta__22AA2996" />
+        <AssociationConnector Association="BDPIDModel.FK__Impartici__idEst__2F10007B" />
+        <AssociationConnector Association="BDPIDModel.FK__Facilitad__idTip__1DE57479" />
+        <AssociationConnector Association="BDPIDModel.FK__Impartici__idFac__2C3393D0" />
+        <AssociationConnector Association="BDPIDModel.FK__Impartici__idPar__2D27B809" />
+        <AssociationConnector Association="BDPIDModel.FK__Participa__idTip__1920BF5C" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

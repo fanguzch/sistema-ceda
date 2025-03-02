@@ -1,0 +1,61 @@
+﻿@model CEDASistema.Models.ViewModels.FacilitadorViewModel
+@{
+    ViewBag.Title = "Agregar Facilitador";
+
+
+}
+
+<h2>Agregar Facilitador</h2>
+
+<div class="row">
+    <div class="col-md-12">
+
+        @using (Html.BeginForm("AddFas", "Facilitador", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationMessage("error", new { @class = "text-danger" })
+
+            @Html.LabelFor(d => d.nombreFas)
+            @Html.TextBoxFor(d => d.nombreFas, new { @class = "form-control" })
+            @Html.ValidationMessage("Nombre", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.primerApe)
+            @Html.TextBoxFor(d => d.primerApe, new { @class = "form-control" })
+            @Html.ValidationMessage("Primer Apellido", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.segundoApe)
+            @Html.TextBoxFor(d => d.segundoApe, new { @class = "form-control" })
+            @Html.ValidationMessage("Segundo Apellido", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.idFas)
+            @Html.TextBoxFor(d => d.idFas, new { @class = "form-control" })
+            @Html.ValidationMessage("Cédula", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.mailFas)
+            @Html.TextBoxFor(d => d.mailFas, new { @class = "form-control" })
+            @Html.ValidationMessage("Correo Electrónico", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.tipoFas)
+            @Html.TextBoxFor(d => d.tipoFas, new { @class = "form-control" })
+            @Html.ValidationMessage("Tipo de Acceso", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.telFas)
+            @Html.TextBoxFor(d => d.telFas, new { @class = "form-control" })
+            @Html.ValidationMessage("Teléfono", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.password)
+            @Html.PasswordFor(d => d.password, new { @class = "form-control" })
+            @Html.ValidationMessage("Contraseña", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.confirmPass)
+            @Html.PasswordFor(d => d.confirmPass, new { @class = "form-control" })
+
+
+            <div style="text-align:right;">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+            </div>
+
+        }
+    </div>
+</div>
+

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDPIDModelStoreContainer" CdmEntityContainer="BDPIDEntities">
+    <EntitySetMapping Name="Cursoes">
+      <EntityTypeMapping TypeName="BDPIDModel.Curso">
+        <MappingFragment StoreEntitySet="Curso">
+          <ScalarProperty Name="idPrograma" ColumnName="idPrograma" />
+          <ScalarProperty Name="idEstadoCursoPrograma" ColumnName="idEstadoCursoPrograma" />
+          <ScalarProperty Name="idSede" ColumnName="idSede" />
+          <ScalarProperty Name="horas" ColumnName="horas" />
+          <ScalarProperty Name="idModalidad" ColumnName="idModalidad" />
+          <ScalarProperty Name="nombreCurso" ColumnName="nombreCurso" />
+          <ScalarProperty Name="idCurso" ColumnName="idCurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dependencias">
+      <EntityTypeMapping TypeName="BDPIDModel.Dependencia">
+        <MappingFragment StoreEntitySet="Dependencia">
+          <ScalarProperty Name="siglasDependencia" ColumnName="siglasDependencia" />
+          <ScalarProperty Name="nombreDependencia" ColumnName="nombreDependencia" />
+          <ScalarProperty Name="idDependencia" ColumnName="idDependencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoCursoProgramas">
+      <EntityTypeMapping TypeName="BDPIDModel.EstadoCursoPrograma">
+        <MappingFragment StoreEntitySet="EstadoCursoPrograma">
+          <ScalarProperty Name="nombreEstadoCursoPrograma" ColumnName="nombreEstadoCursoPrograma" />
+          <ScalarProperty Name="idEstadoCursoPrograma" ColumnName="idEstadoCursoPrograma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoParticipantes">
+      <EntityTypeMapping TypeName="BDPIDModel.EstadoParticipante">
+        <MappingFragment StoreEntitySet="EstadoParticipante">
+          <ScalarProperty Name="nombreEstadoParticipante" ColumnName="nombreEstadoParticipante" />
+          <ScalarProperty Name="idEstadoParticipante" ColumnName="idEstadoParticipante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facilitadors">
+      <EntityTypeMapping TypeName="BDPIDModel.Facilitador">
+        <MappingFragment StoreEntitySet="Facilitador">
+          <ScalarProperty Name="idTipo" ColumnName="idTipo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correoElectronico" ColumnName="correoElectronico" />
+          <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="nombreFacilitador" ColumnName="nombreFacilitador" />
+          <ScalarProperty Name="contraseñaFacilitador" ColumnName="contraseñaFacilitador" />
+          <ScalarProperty Name="cedulaFacilitador" ColumnName="cedulaFacilitador" />
+          <ScalarProperty Name="idFacilitador" ColumnName="idFacilitador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modalidads">
+      <EntityTypeMapping TypeName="BDPIDModel.Modalidad">
+        <MappingFragment StoreEntitySet="Modalidad">
+          <ScalarProperty Name="nombreModalidad" ColumnName="nombreModalidad" />
+          <ScalarProperty Name="idModalidad" ColumnName="idModalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Participantes">
+      <EntityTypeMapping TypeName="BDPIDModel.Participante">
+        <MappingFragment StoreEntitySet="Participante">
+          <ScalarProperty Name="idTipo" ColumnName="idTipo" />
+          <ScalarProperty Name="idDependencia" ColumnName="idDependencia" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correoElectronico" ColumnName="correoElectronico" />
+          <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="nombreParticipante" ColumnName="nombreParticipante" />
+          <ScalarProperty Name="cedulaParticipante" ColumnName="cedulaParticipante" />
+          <ScalarProperty Name="idParticipante" ColumnName="idParticipante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programas">
+      <EntityTypeMapping TypeName="BDPIDModel.Programa">
+        <MappingFragment StoreEntitySet="Programa">
+          <ScalarProperty Name="objetivosPrograma" ColumnName="objetivosPrograma" />
+          <ScalarProperty Name="idEstadoCursoPrograma" ColumnName="idEstadoCursoPrograma" />
+          <ScalarProperty Name="nombrePrograma" ColumnName="nombrePrograma" />
+          <ScalarProperty Name="idPrograma" ColumnName="idPrograma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sedes">
+      <EntityTypeMapping TypeName="BDPIDModel.Sede">
+        <MappingFragment StoreEntitySet="Sede">
+          <ScalarProperty Name="siglasSede" ColumnName="siglasSede" />
+          <ScalarProperty Name="nombreSede" ColumnName="nombreSede" />
+          <ScalarProperty Name="idSede" ColumnName="idSede" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BDPIDModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipoes">
+      <EntityTypeMapping TypeName="BDPIDModel.Tipo">
+        <MappingFragment StoreEntitySet="Tipo">
+          <ScalarProperty Name="nombreTipo" ColumnName="nombreTipo" />
+          <ScalarProperty Name="idTipo" ColumnName="idTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImparticionDeCursoes">
+      <EntityTypeMapping TypeName="BDPIDModel.ImparticionDeCurso">
+        <MappingFragment StoreEntitySet="ImparticionDeCurso">
+          <ScalarProperty Name="idEstadoParticipante" ColumnName="idEstadoParticipante" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="semestre" ColumnName="semestre" />
+          <ScalarProperty Name="anno" ColumnName="anno" />
+          <ScalarProperty Name="fechaFinal" ColumnName="fechaFinal" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="idCurso" ColumnName="idCurso" />
+          <ScalarProperty Name="idParticipante" ColumnName="idParticipante" />
+          <ScalarProperty Name="idFacilitador" ColumnName="idFacilitador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

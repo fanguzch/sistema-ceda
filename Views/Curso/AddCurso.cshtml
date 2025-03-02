@@ -1,0 +1,49 @@
+﻿@model CEDASistema.Models.ViewModels.CursoViewModel
+
+@{
+    ViewBag.Title = "Agregar Curso";
+
+
+
+}
+
+<h2>Agregar Curso</h2>
+
+<div class="row">
+    <div class="col-md-12">
+
+        @using (Html.BeginForm("AddCurso", "Curso", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("error", new { @class = "text-danger" })
+
+            @Html.LabelFor(d => d.nombreCurso)
+            @Html.TextBoxFor(d => d.nombreCurso, new { @class = "form-control" })
+            @Html.ValidationMessage("Nombre Curso ", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.IDmodalidad)
+            @Html.TextBoxFor(d => d.IDmodalidad, new { @class = "form-control" })
+            @Html.ValidationMessage("ID Modalidad", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.IDSede)
+            @Html.TextBoxFor(d => d.IDSede, new { @class = "form-control" })
+            @Html.ValidationMessage("ID Sede", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.IDEstado)
+            @Html.TextBoxFor(d => d.IDEstado, new { @class = "form-control" })
+            @Html.ValidationMessage("ID Estado", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.IDProg)
+            @Html.TextBoxFor(d => d.IDProg, new { @class = "form-control" })
+            @Html.ValidationMessage("ID Programa", new { @class = "text-danger" })<br />
+
+
+            <div stye="align-right">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+            </div>
+        }
+
+    </div>
+</div>

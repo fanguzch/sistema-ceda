@@ -1,0 +1,39 @@
+﻿@model CEDASistema.Models.ViewModels.ProgramaViewModel
+
+@{
+    ViewBag.Title = "Agregar Programa ";
+}
+
+<h2>Agregar Programa</h2>
+
+
+<div class="row">
+    <div class="col-md-12">
+
+        @using (Html.BeginForm("AddProg", "Programa", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+
+            @Html.AntiForgeryToken()
+            @Html.ValidationMessage("error", new { @class = "text-danger" })
+
+            @Html.LabelFor(d => d.nombreProg)
+            @Html.TextBoxFor(d => d.nombreProg, new { @class = "form-control" })
+            @Html.ValidationMessage("Nombre Programa", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.IDestadoProg)
+            @Html.TextBoxFor(d => d.IDestadoProg, new { @class = "form-control" })
+            @Html.ValidationMessage("ID Estado del Programa", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.objProgr)
+            @Html.TextBoxFor(d => d.objProgr, new { @class = "form-control" })
+            @Html.ValidationMessage("Objetivos del Programa", new { @class = "text-danger" })<br />
+
+            <div style="text-align:right;">
+                <input type="submit" class="btn btn-success" value="Guardar" />
+            </div>
+        }
+
+    </div>
+</div>
+
+
